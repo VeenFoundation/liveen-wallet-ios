@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B112FC69208C575B002E35EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112FC68208C575B002E35EB /* AppDelegate.swift */; };
+		B112FC6B208C575B002E35EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112FC6A208C575B002E35EB /* MainViewController.swift */; };
+		B112FC6E208C575B002E35EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112FC6C208C575B002E35EB /* Main.storyboard */; };
+		B112FC70208C575D002E35EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112FC6F208C575D002E35EB /* Assets.xcassets */; };
+		B112FC73208C575D002E35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112FC71208C575D002E35EB /* LaunchScreen.storyboard */; };
+		B1C722B3208D777E00CD6249 /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B2208D777E00CD6249 /* CreateWalletViewController.swift */; };
+		B1C722B5208D779200CD6249 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B4208D779200CD6249 /* WalletViewController.swift */; };
+		B1C722B7208D779F00CD6249 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B6208D779F00CD6249 /* ReceiveViewController.swift */; };
+		B1C722B9208D77AD00CD6249 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B8208D77AD00CD6249 /* SendViewController.swift */; };
+		B1C722BF208D77DF00CD6249 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722BE208D77DF00CD6249 /* ChangePasswordViewController.swift */; };
+		B1C722C1208D77E800CD6249 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722C0208D77E800CD6249 /* TransactionViewController.swift */; };
+		B1C722C3208D77F900CD6249 /* PreExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722C2208D77F900CD6249 /* PreExportViewController.swift */; };
+		B1C722C5208D780100CD6249 /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722C4208D780100CD6249 /* ExportViewController.swift */; };
+		B1C722C7208D95A300CD6249 /* MaterialComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C722C6208D95A300CD6249 /* MaterialComponents.framework */; };
+		B1C722C9208D95A300CD6249 /* MDFInternationalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C722C8208D95A300CD6249 /* MDFInternationalization.framework */; };
+		B1C722CB208D95A300CD6249 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C722CA208D95A300CD6249 /* TextFieldEffects.framework */; };
+		B1C722CE208DB72600CD6249 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722CD208DB72600CD6249 /* UIExtensions.swift */; };
+		D3033A4602D000B09F1B58FF /* Pods_LiveenWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B170D196AFD5CD385123479E /* Pods_LiveenWallet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		090C54AD2ACEDFBC60AAD69E /* Pods-LiveenWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveenWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveenWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet.release.xcconfig"; sourceTree = "<group>"; };
+		B112FC65208C575B002E35EB /* LiveenWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveenWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B112FC68208C575B002E35EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B112FC6A208C575B002E35EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B112FC6D208C575B002E35EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B112FC6F208C575D002E35EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B112FC72208C575D002E35EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B112FC74208C575D002E35EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B170D196AFD5CD385123479E /* Pods_LiveenWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveenWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C722B2208D777E00CD6249 /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
+		B1C722B4208D779200CD6249 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		B1C722B6208D779F00CD6249 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		B1C722B8208D77AD00CD6249 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		B1C722BE208D77DF00CD6249 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B1C722C0208D77E800CD6249 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		B1C722C2208D77F900CD6249 /* PreExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreExportViewController.swift; sourceTree = "<group>"; };
+		B1C722C4208D780100CD6249 /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		B1C722C6208D95A300CD6249 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C722C8208D95A300CD6249 /* MDFInternationalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MDFInternationalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C722CA208D95A300CD6249 /* TextFieldEffects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TextFieldEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C722CD208DB72600CD6249 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B112FC62208C575B002E35EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C722C7208D95A300CD6249 /* MaterialComponents.framework in Frameworks */,
+				B1C722C9208D95A300CD6249 /* MDFInternationalization.framework in Frameworks */,
+				B1C722CB208D95A300CD6249 /* TextFieldEffects.framework in Frameworks */,
+				D3033A4602D000B09F1B58FF /* Pods_LiveenWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6462F31B0E47EA1EBF41B493 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				090C54AD2ACEDFBC60AAD69E /* Pods-LiveenWallet.debug.xcconfig */,
+				42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC3989DF57CD3A7627CCA5FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C722C6208D95A300CD6249 /* MaterialComponents.framework */,
+				B1C722C8208D95A300CD6249 /* MDFInternationalization.framework */,
+				B1C722CA208D95A300CD6249 /* TextFieldEffects.framework */,
+				B170D196AFD5CD385123479E /* Pods_LiveenWallet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B112FC5C208C575B002E35EB = {
+			isa = PBXGroup;
+			children = (
+				B112FC67208C575B002E35EB /* LiveenWallet */,
+				B112FC66208C575B002E35EB /* Products */,
+				6462F31B0E47EA1EBF41B493 /* Pods */,
+				AC3989DF57CD3A7627CCA5FE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B112FC66208C575B002E35EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B112FC65208C575B002E35EB /* LiveenWallet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B112FC67208C575B002E35EB /* LiveenWallet */ = {
+			isa = PBXGroup;
+			children = (
+				B1C722CC208DB71800CD6249 /* views */,
+				B1C722B1208D6D6700CD6249 /* controllers */,
+				B112FC68208C575B002E35EB /* AppDelegate.swift */,
+				B112FC6C208C575B002E35EB /* Main.storyboard */,
+				B112FC6F208C575D002E35EB /* Assets.xcassets */,
+				B112FC71208C575D002E35EB /* LaunchScreen.storyboard */,
+				B112FC74208C575D002E35EB /* Info.plist */,
+			);
+			path = LiveenWallet;
+			sourceTree = "<group>";
+		};
+		B1C722B1208D6D6700CD6249 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B112FC6A208C575B002E35EB /* MainViewController.swift */,
+				B1C722B2208D777E00CD6249 /* CreateWalletViewController.swift */,
+				B1C722B4208D779200CD6249 /* WalletViewController.swift */,
+				B1C722B6208D779F00CD6249 /* ReceiveViewController.swift */,
+				B1C722C2208D77F900CD6249 /* PreExportViewController.swift */,
+				B1C722C4208D780100CD6249 /* ExportViewController.swift */,
+				B1C722BE208D77DF00CD6249 /* ChangePasswordViewController.swift */,
+				B1C722C0208D77E800CD6249 /* TransactionViewController.swift */,
+				B1C722B8208D77AD00CD6249 /* SendViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		B1C722CC208DB71800CD6249 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B1C722CD208DB72600CD6249 /* UIExtensions.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B112FC64208C575B002E35EB /* LiveenWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B112FC77208C575D002E35EB /* Build configuration list for PBXNativeTarget "LiveenWallet" */;
+			buildPhases = (
+				33B191E2C0E922E9A05C20FD /* [CP] Check Pods Manifest.lock */,
+				B112FC61208C575B002E35EB /* Sources */,
+				B112FC62208C575B002E35EB /* Frameworks */,
+				B112FC63208C575B002E35EB /* Resources */,
+				9E19D11E528863EFEBF388A9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveenWallet;
+			productName = LiveenWallet;
+			productReference = B112FC65208C575B002E35EB /* LiveenWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B112FC5D208C575B002E35EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = veenfoundation;
+				TargetAttributes = {
+					B112FC64208C575B002E35EB = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = B112FC60208C575B002E35EB /* Build configuration list for PBXProject "LiveenWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B112FC5C208C575B002E35EB;
+			productRefGroup = B112FC66208C575B002E35EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B112FC64208C575B002E35EB /* LiveenWallet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B112FC63208C575B002E35EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B112FC73208C575D002E35EB /* LaunchScreen.storyboard in Resources */,
+				B112FC70208C575D002E35EB /* Assets.xcassets in Resources */,
+				B112FC6E208C575B002E35EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33B191E2C0E922E9A05C20FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveenWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E19D11E528863EFEBF388A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B112FC61208C575B002E35EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C722B3208D777E00CD6249 /* CreateWalletViewController.swift in Sources */,
+				B1C722BF208D77DF00CD6249 /* ChangePasswordViewController.swift in Sources */,
+				B1C722B5208D779200CD6249 /* WalletViewController.swift in Sources */,
+				B1C722CE208DB72600CD6249 /* UIExtensions.swift in Sources */,
+				B1C722C5208D780100CD6249 /* ExportViewController.swift in Sources */,
+				B1C722B9208D77AD00CD6249 /* SendViewController.swift in Sources */,
+				B1C722C1208D77E800CD6249 /* TransactionViewController.swift in Sources */,
+				B1C722B7208D779F00CD6249 /* ReceiveViewController.swift in Sources */,
+				B112FC6B208C575B002E35EB /* MainViewController.swift in Sources */,
+				B1C722C3208D77F900CD6249 /* PreExportViewController.swift in Sources */,
+				B112FC69208C575B002E35EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B112FC6C208C575B002E35EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B112FC6D208C575B002E35EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B112FC71208C575D002E35EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B112FC72208C575D002E35EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B112FC75208C575D002E35EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B112FC76208C575D002E35EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B112FC78208C575D002E35EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090C54AD2ACEDFBC60AAD69E /* Pods-LiveenWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV4VTT4EX9;
+				INFOPLIST_FILE = LiveenWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liveen.io.LiveenWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B112FC79208C575D002E35EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV4VTT4EX9;
+				INFOPLIST_FILE = LiveenWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liveen.io.LiveenWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B112FC60208C575B002E35EB /* Build configuration list for PBXProject "LiveenWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B112FC75208C575D002E35EB /* Debug */,
+				B112FC76208C575D002E35EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B112FC77208C575D002E35EB /* Build configuration list for PBXNativeTarget "LiveenWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B112FC78208C575D002E35EB /* Debug */,
+				B112FC79208C575D002E35EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B112FC5D208C575B002E35EB /* Project object */;
+}
