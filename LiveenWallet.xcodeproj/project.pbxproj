@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8242CD092099655D007AFC7D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8242CD082099655D007AFC7D /* Constant.swift */; };
+		8242CD142099B38C007AFC7D /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8242CD132099B38C007AFC7D /* TransactionTableViewCell.swift */; };
+		8242CD1C2099FCF9007AFC7D /* checkPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8242CD1B2099FCF9007AFC7D /* checkPasswordViewController.swift */; };
 		B112FC69208C575B002E35EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112FC68208C575B002E35EB /* AppDelegate.swift */; };
 		B112FC6B208C575B002E35EB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B112FC6A208C575B002E35EB /* MainViewController.swift */; };
 		B112FC6E208C575B002E35EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112FC6C208C575B002E35EB /* Main.storyboard */; };
 		B112FC70208C575D002E35EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B112FC6F208C575D002E35EB /* Assets.xcassets */; };
 		B112FC73208C575D002E35EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B112FC71208C575D002E35EB /* LaunchScreen.storyboard */; };
+		B1A68D7220A1912A00BF8571 /* VeenSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A68D7120A1912A00BF8571 /* VeenSDK.swift */; };
+		B1A68D7A20A1DC3600BF8571 /* LiveenWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A68D7920A1DC3600BF8571 /* LiveenWalletTests.swift */; };
+		B1A68D8120A1DE4600BF8571 /* VeenSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A68D7120A1912A00BF8571 /* VeenSDK.swift */; };
 		B1C722B3208D777E00CD6249 /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B2208D777E00CD6249 /* CreateWalletViewController.swift */; };
 		B1C722B5208D779200CD6249 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B4208D779200CD6249 /* WalletViewController.swift */; };
 		B1C722B7208D779F00CD6249 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C722B6208D779F00CD6249 /* ReceiveViewController.swift */; };
@@ -27,9 +33,51 @@
 		D3033A4602D000B09F1B58FF /* Pods_LiveenWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B170D196AFD5CD385123479E /* Pods_LiveenWallet.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8289F1AC209DDBD7008AD70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 82140EA91FA88E5B00FAF19B;
+			remoteInfo = KinSDK;
+		};
+		8289F1AE209DDBD7008AD70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8278352E1FA9B5F20006C3DF;
+			remoteInfo = KinTestHost;
+		};
+		8289F1B0209DDBD7008AD70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 827835411FA9B5F20006C3DF;
+			remoteInfo = KinSDKTests;
+		};
+		8289F1B2209DDBE1008AD70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 82140EA81FA88E5B00FAF19B;
+			remoteInfo = KinSDK;
+		};
+		B1A68D7C20A1DC3600BF8571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B112FC5D208C575B002E35EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B112FC64208C575B002E35EB;
+			remoteInfo = LiveenWallet;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		090C54AD2ACEDFBC60AAD69E /* Pods-LiveenWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveenWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveenWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet.release.xcconfig"; sourceTree = "<group>"; };
+		8242CD082099655D007AFC7D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8242CD132099B38C007AFC7D /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		8242CD1B2099FCF9007AFC7D /* checkPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkPasswordViewController.swift; sourceTree = "<group>"; };
+		8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KinSDK.xcodeproj; path = "../../kin-core-ios-ethereum-dev/KinSDK/KinSDK.xcodeproj"; sourceTree = "<group>"; };
 		B112FC65208C575B002E35EB /* LiveenWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveenWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B112FC68208C575B002E35EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B112FC6A208C575B002E35EB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +86,10 @@
 		B112FC72208C575D002E35EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B112FC74208C575D002E35EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B170D196AFD5CD385123479E /* Pods_LiveenWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveenWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1A68D7120A1912A00BF8571 /* VeenSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeenSDK.swift; sourceTree = "<group>"; };
+		B1A68D7720A1DC3600BF8571 /* LiveenWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveenWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1A68D7920A1DC3600BF8571 /* LiveenWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveenWalletTests.swift; sourceTree = "<group>"; };
+		B1A68D7B20A1DC3600BF8571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C722B2208D777E00CD6249 /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
 		B1C722B4208D779200CD6249 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		B1C722B6208D779F00CD6249 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1A68D7420A1DC3600BF8571 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +133,16 @@
 				42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8289F1A7209DDBD7008AD70D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8289F1AD209DDBD7008AD70D /* KinSDK.framework */,
+				8289F1AF209DDBD7008AD70D /* KinTestHost.app */,
+				8289F1B1209DDBD7008AD70D /* KinSDKTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		AC3989DF57CD3A7627CCA5FE /* Frameworks */ = {
@@ -91,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B112FC67208C575B002E35EB /* LiveenWallet */,
+				B1A68D7820A1DC3600BF8571 /* LiveenWalletTests */,
 				B112FC66208C575B002E35EB /* Products */,
 				6462F31B0E47EA1EBF41B493 /* Pods */,
 				AC3989DF57CD3A7627CCA5FE /* Frameworks */,
@@ -101,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				B112FC65208C575B002E35EB /* LiveenWallet.app */,
+				B1A68D7720A1DC3600BF8571 /* LiveenWalletTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,15 +179,27 @@
 		B112FC67208C575B002E35EB /* LiveenWallet */ = {
 			isa = PBXGroup;
 			children = (
+				8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */,
 				B1C722CC208DB71800CD6249 /* views */,
 				B1C722B1208D6D6700CD6249 /* controllers */,
 				B112FC68208C575B002E35EB /* AppDelegate.swift */,
+				8242CD082099655D007AFC7D /* Constant.swift */,
+				B1A68D7120A1912A00BF8571 /* VeenSDK.swift */,
 				B112FC6C208C575B002E35EB /* Main.storyboard */,
 				B112FC6F208C575D002E35EB /* Assets.xcassets */,
 				B112FC71208C575D002E35EB /* LaunchScreen.storyboard */,
 				B112FC74208C575D002E35EB /* Info.plist */,
 			);
 			path = LiveenWallet;
+			sourceTree = "<group>";
+		};
+		B1A68D7820A1DC3600BF8571 /* LiveenWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1A68D7920A1DC3600BF8571 /* LiveenWalletTests.swift */,
+				B1A68D7B20A1DC3600BF8571 /* Info.plist */,
+			);
+			path = LiveenWalletTests;
 			sourceTree = "<group>";
 		};
 		B1C722B1208D6D6700CD6249 /* controllers */ = {
@@ -131,6 +214,7 @@
 				B1C722BE208D77DF00CD6249 /* ChangePasswordViewController.swift */,
 				B1C722C0208D77E800CD6249 /* TransactionViewController.swift */,
 				B1C722B8208D77AD00CD6249 /* SendViewController.swift */,
+				8242CD1B2099FCF9007AFC7D /* checkPasswordViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -139,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C722CD208DB72600CD6249 /* UIExtensions.swift */,
+				8242CD132099B38C007AFC7D /* TransactionTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -159,11 +244,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				8289F1B3209DDBE1008AD70D /* PBXTargetDependency */,
 			);
 			name = LiveenWallet;
 			productName = LiveenWallet;
 			productReference = B112FC65208C575B002E35EB /* LiveenWallet.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B1A68D7620A1DC3600BF8571 /* LiveenWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1A68D7E20A1DC3600BF8571 /* Build configuration list for PBXNativeTarget "LiveenWalletTests" */;
+			buildPhases = (
+				B1A68D7320A1DC3600BF8571 /* Sources */,
+				B1A68D7420A1DC3600BF8571 /* Frameworks */,
+				B1A68D7520A1DC3600BF8571 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1A68D7D20A1DC3600BF8571 /* PBXTargetDependency */,
+			);
+			name = LiveenWalletTests;
+			productName = LiveenWalletTests;
+			productReference = B1A68D7720A1DC3600BF8571 /* LiveenWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -177,6 +281,11 @@
 				TargetAttributes = {
 					B112FC64208C575B002E35EB = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					B1A68D7620A1DC3600BF8571 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = B112FC64208C575B002E35EB;
 					};
 				};
 			};
@@ -191,12 +300,43 @@
 			mainGroup = B112FC5C208C575B002E35EB;
 			productRefGroup = B112FC66208C575B002E35EB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8289F1A7209DDBD7008AD70D /* Products */;
+					ProjectRef = 8289F1A6209DDBD7008AD70D /* KinSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B112FC64208C575B002E35EB /* LiveenWallet */,
+				B1A68D7620A1DC3600BF8571 /* LiveenWalletTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8289F1AD209DDBD7008AD70D /* KinSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KinSDK.framework;
+			remoteRef = 8289F1AC209DDBD7008AD70D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8289F1AF209DDBD7008AD70D /* KinTestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = KinTestHost.app;
+			remoteRef = 8289F1AE209DDBD7008AD70D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8289F1B1209DDBD7008AD70D /* KinSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KinSDKTests.xctest;
+			remoteRef = 8289F1B0209DDBD7008AD70D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B112FC63208C575B002E35EB /* Resources */ = {
@@ -206,6 +346,13 @@
 				B112FC73208C575D002E35EB /* LaunchScreen.storyboard in Resources */,
 				B112FC70208C575D002E35EB /* Assets.xcassets in Resources */,
 				B112FC6E208C575B002E35EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1A68D7520A1DC3600BF8571 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,14 +384,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LiveenWallet/Pods-LiveenWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,16 +425,42 @@
 				B1C722B5208D779200CD6249 /* WalletViewController.swift in Sources */,
 				B1C722CE208DB72600CD6249 /* UIExtensions.swift in Sources */,
 				B1C722C5208D780100CD6249 /* ExportViewController.swift in Sources */,
+				8242CD1C2099FCF9007AFC7D /* checkPasswordViewController.swift in Sources */,
 				B1C722B9208D77AD00CD6249 /* SendViewController.swift in Sources */,
 				B1C722C1208D77E800CD6249 /* TransactionViewController.swift in Sources */,
 				B1C722B7208D779F00CD6249 /* ReceiveViewController.swift in Sources */,
+				8242CD142099B38C007AFC7D /* TransactionTableViewCell.swift in Sources */,
 				B112FC6B208C575B002E35EB /* MainViewController.swift in Sources */,
 				B1C722C3208D77F900CD6249 /* PreExportViewController.swift in Sources */,
 				B112FC69208C575B002E35EB /* AppDelegate.swift in Sources */,
+				B1A68D7220A1912A00BF8571 /* VeenSDK.swift in Sources */,
+				8242CD092099655D007AFC7D /* Constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1A68D7320A1DC3600BF8571 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A68D8120A1DE4600BF8571 /* VeenSDK.swift in Sources */,
+				B1A68D7A20A1DC3600BF8571 /* LiveenWalletTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8289F1B3209DDBE1008AD70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KinSDK;
+			targetProxy = 8289F1B2209DDBE1008AD70D /* PBXContainerItemProxy */;
+		};
+		B1A68D7D20A1DC3600BF8571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B112FC64208C575B002E35EB /* LiveenWallet */;
+			targetProxy = B1A68D7C20A1DC3600BF8571 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B112FC6C208C575B002E35EB /* Main.storyboard */ = {
@@ -416,11 +603,12 @@
 			baseConfigurationReference = 090C54AD2ACEDFBC60AAD69E /* Pods-LiveenWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV4VTT4EX9;
 				INFOPLIST_FILE = LiveenWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,6 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liveen.io.LiveenWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,11 +627,12 @@
 			baseConfigurationReference = 42DADEA0C4C53F6FF749CE73 /* Pods-LiveenWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HV4VTT4EX9;
 				INFOPLIST_FILE = LiveenWallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +642,48 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1A68D7F20A1DC3600BF8571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV4VTT4EX9;
+				INFOPLIST_FILE = LiveenWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liveen.io.LiveenWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveenWallet.app/LiveenWallet";
+			};
+			name = Debug;
+		};
+		B1A68D8020A1DC3600BF8571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HV4VTT4EX9;
+				INFOPLIST_FILE = LiveenWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liveen.io.LiveenWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveenWallet.app/LiveenWallet";
 			};
 			name = Release;
 		};
@@ -472,6 +704,15 @@
 			buildConfigurations = (
 				B112FC78208C575D002E35EB /* Debug */,
 				B112FC79208C575D002E35EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1A68D7E20A1DC3600BF8571 /* Build configuration list for PBXNativeTarget "LiveenWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1A68D7F20A1DC3600BF8571 /* Debug */,
+				B1A68D8020A1DC3600BF8571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

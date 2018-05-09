@@ -7,19 +7,36 @@
 //
 
 import UIKit
+import KinSDK
+
+struct Provider: ServiceProvider {
+    public let url : URL
+    public let networkId: NetworkId
+    
+    init(url: URL, networkId: NetworkId) {
+        self.url = url
+        self.networkId = networkId
+    }
+}
 
 class MainViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func createWalletButton(_ sender: Any) {
+        print("click Button")
+        
+        let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let createWalletViewController = mainStoryBoard.instantiateViewController(withIdentifier: "createWalletViewController") as! CreateWalletViewController
+        self.navigationController?.pushViewController(createWalletViewController, animated: true)
+        
+    }
+    
 }
 

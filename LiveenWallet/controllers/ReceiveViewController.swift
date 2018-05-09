@@ -11,14 +11,26 @@ import UIKit
 class ReceiveViewController: UIViewController {
     @IBOutlet var qrcodeImageView:UIImageView!
     @IBOutlet var copyAddressButton:UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.isHidden = true;
         
-        let qrcodeImage = generateQRCodeImage("0x93BC4bec6D678e8e74bB9EC3e1Be5EDfA608e2B6")
-        displayQRCodeImage(image: qrcodeImage)
+        do {
+            let veenApi = try VeenAPI()
+            let account = try veenApi.getAccount()
+            
+            print("Get user address: \(account.publicAddress)")
+            
+            self.addressLabel.text = account.publicAddress
+            
+            let qrcodeImage = generateQRCodeImage(account.publicAddress)
+            displayQRCodeImage(image: qrcodeImage)
+        } catch {
+            print("error in ReceiveViewController: \(error)")
+        }
     }
     
     func generateQRCodeImage(_ text: String) -> CIImage? {
@@ -53,6 +65,15 @@ class ReceiveViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func copyWalletAddressClick(_ sender: Any) {
+        let address = addressLabel.text!
+        UIPasteboard.general.string = address
+        
+        let alertController = UIAlertController(title: "Notice", message: "Copied in Clipboard", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
 }
 

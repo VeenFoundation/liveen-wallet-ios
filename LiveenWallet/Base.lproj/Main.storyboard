@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3i7-sn-hne">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,28 +10,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Vi-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVi" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liveen Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJ2-i9-7bk">
-                                <rect key="frame" x="136" y="57" width="103" height="24"/>
+                                <rect key="frame" x="136" y="101" width="103" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easiest way to keep protect your veen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZs-Yz-hb7">
-                                <rect key="frame" x="53" y="98" width="269" height="22"/>
+                                <rect key="frame" x="53" y="142" width="269" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.79607843137254897" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_wallet" translatesAutoresizingMaskIntoConstraints="NO" id="FOj-3t-SvN">
-                                <rect key="frame" x="152" y="258" width="70" height="78"/>
+                                <rect key="frame" x="152" y="302" width="70" height="78"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1La-Cp-gjP">
                                 <rect key="frame" x="42" y="587" width="291" height="40"/>
@@ -49,7 +49,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Wa8-ht-7bB" kind="showDetail" id="9zn-jb-iTs"/>
+                                    <action selector="createWalletButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQI-ZB-TgL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,15 +67,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mKt-wt-pML"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="33.733133433283363"/>
+            <point key="canvasLocation" x="975.20000000000005" y="33.733133433283363"/>
         </scene>
         <!--Create Wallet View Controller-->
         <scene sceneID="5Qs-U6-WJ5">
             <objects>
-                <viewController id="Wa8-ht-7bB" customClass="CreateWalletViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createWalletViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wa8-ht-7bB" customClass="CreateWalletViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4f-Hr-pfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +109,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="8wR-C5-qSI" kind="showDetail" id="oE2-WP-K0r"/>
+                                    <action selector="confirmButton:" destination="Wa8-ht-7bB" eventType="touchUpInside" id="oNF-ne-pgB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,12 +132,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqp-0o-e8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="33.733133433283363"/>
+            <point key="canvasLocation" x="1895.2" y="33.733133433283363"/>
         </scene>
         <!--Wallet View Controller-->
         <scene sceneID="ihd-HY-hMN">
             <objects>
-                <viewController id="QgI-In-yqv" customClass="WalletViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walletViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QgI-In-yqv" customClass="WalletViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4FU-it-coS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,8 +157,8 @@
                                         <color key="textColor" red="0.79607843140000001" green="0.89019607840000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1J-g6-Jsj">
-                                        <rect key="frame" x="109" y="118" width="156" height="38.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1J-g6-Jsj">
+                                        <rect key="frame" x="182.5" y="118" width="9" height="38.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -178,7 +179,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="LtO-d3-qsF" kind="show" id="Ocf-hR-5GK"/>
+                                                    <action selector="sendButtonClick:" destination="QgI-In-yqv" eventType="touchUpInside" id="cwr-vh-mzd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RO8-VS-Ncf">
@@ -194,7 +195,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="tmU-KK-NtN" kind="show" id="C69-k4-2xh"/>
+                                                    <action selector="reciveButtonClick:" destination="QgI-In-yqv" eventType="touchUpInside" id="qhr-m3-L4e"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -238,7 +239,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="FMU-ZG-Upg" kind="show" id="z7D-Kh-6JJ"/>
+                                            <action selector="showTranscationClick:" destination="QgI-In-yqv" eventType="touchUpInside" id="47K-Ii-F8f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foV-D2-Y15">
@@ -259,7 +260,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="kbe-7b-8Un" kind="show" id="rVi-w6-XUZ"/>
+                                            <action selector="changePasswordClick:" destination="QgI-In-yqv" eventType="touchUpInside" id="uch-rw-bHN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxg-Ux-enM">
@@ -280,7 +281,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="jK3-Lu-kYj" kind="show" id="anh-UF-Sck"/>
+                                            <action selector="exportMyPrivateClick:" destination="QgI-In-yqv" eventType="touchUpInside" id="0wf-TV-h9N"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -312,18 +313,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSK-OO-AY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2792.8000000000002" y="33.733133433283363"/>
+            <point key="canvasLocation" x="3732" y="33.733133433283363"/>
         </scene>
         <!--Receive View Controller-->
         <scene sceneID="i3q-I2-QE8">
             <objects>
-                <viewController id="tmU-KK-NtN" customClass="ReceiveViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="receiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tmU-KK-NtN" customClass="ReceiveViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y9r-es-9qz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAm-Q1-rp0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="p0Y-WE-GA4">
                                         <rect key="frame" x="339" y="32" width="20" height="20"/>
@@ -361,19 +362,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Public Ethereum Wallet Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq9-lH-q3I">
-                                <rect key="frame" x="90" y="173" width="195" height="17"/>
+                                <rect key="frame" x="90" y="129" width="195" height="17"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x93BC4bec6D678e8e74bB9EC3e1Be5EDfA608e2B6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-Pv-aH5">
-                                <rect key="frame" x="41.5" y="474" width="292.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNh-Pv-aH5">
+                                <rect key="frame" x="181.5" y="430" width="13" height="17"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                                 <color key="textColor" red="0.43137254899999999" green="0.43137254899999999" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWS-te-iUm">
-                                <rect key="frame" x="57" y="201" width="261" height="258"/>
+                                <rect key="frame" x="57" y="157" width="261" height="258"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqu-Xx-2Ne">
                                         <rect key="frame" x="20" y="20" width="221" height="218"/>
@@ -398,7 +399,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-Zm-CgW">
-                                <rect key="frame" x="43" y="556" width="291" height="40"/>
+                                <rect key="frame" x="43" y="512" width="291" height="40"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Hps-38-M64"/>
@@ -413,6 +414,9 @@
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyWalletAddressClick:" destination="tmU-KK-NtN" eventType="touchUpInside" id="gFZ-TJ-Wgi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -433,13 +437,14 @@
                         <viewLayoutGuide key="safeArea" id="prM-nQ-fJn"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="bNh-Pv-aH5" id="K1S-L7-SCS"/>
                         <outlet property="copyAddressButton" destination="0oe-Zm-CgW" id="6hx-qK-a4e"/>
                         <outlet property="qrcodeImageView" destination="cqu-Xx-2Ne" id="SUu-lX-7zg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fae-CM-6n9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3774" y="-218"/>
+            <point key="canvasLocation" x="4712.8000000000002" y="-218.1409295352324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Pl-y1-2S7">
@@ -457,30 +462,123 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPv-3F-jE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.5999999999999" y="33.733133433283363"/>
+            <point key="canvasLocation" x="2792.8000000000002" y="33.733133433283363"/>
+        </scene>
+        <!--Check Password View Controller-->
+        <scene sceneID="g3h-kg-fMC">
+            <objects>
+                <viewController storyboardIdentifier="checkPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8z0-FY-EeH" customClass="checkPasswordViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwK-ze-05c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOa-Xq-2RD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcA-1V-IlJ">
+                                        <rect key="frame" x="111" y="102" width="154" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="txP-YC-yxp">
+                                        <rect key="frame" x="42" y="191" width="291" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="BJP-7q-0of"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbP-z8-SDZ">
+                                        <rect key="frame" x="42" y="281" width="293" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="kfr-qy-Zad"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                        <state key="normal" title="Confirm">
+                                            <color key="titleColor" red="0.16078431369999999" green="0.4431372549" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="confirmClick:" destination="8z0-FY-EeH" eventType="touchUpInside" id="Wgy-Hs-7ls"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-iL-Vlf">
+                                        <rect key="frame" x="339" y="97" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="e4f-aY-TLv"/>
+                                            <constraint firstAttribute="width" constant="20" id="gdD-9S-YoY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOb-IN-ntc">
+                                        <rect key="frame" x="328" y="85" width="42" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="20j-SU-TMp"/>
+                                            <constraint firstAttribute="height" constant="44" id="BYZ-Lo-57O"/>
+                                        </constraints>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.4431372549" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FbP-z8-SDZ" firstAttribute="top" secondItem="txP-YC-yxp" secondAttribute="bottom" constant="20" id="DXm-Ia-Wk5"/>
+                                    <constraint firstItem="1l4-wX-kId" firstAttribute="trailing" secondItem="txP-YC-yxp" secondAttribute="trailing" constant="42" id="IVl-05-XYn"/>
+                                    <constraint firstItem="1l4-wX-kId" firstAttribute="trailing" secondItem="UOb-IN-ntc" secondAttribute="trailing" constant="5" id="KF1-VN-8TH"/>
+                                    <constraint firstItem="1l4-wX-kId" firstAttribute="trailing" secondItem="FbP-z8-SDZ" secondAttribute="trailing" constant="40" id="Qxy-XF-zTQ"/>
+                                    <constraint firstItem="HcA-1V-IlJ" firstAttribute="centerX" secondItem="1l4-wX-kId" secondAttribute="centerX" id="SVz-MH-Omt"/>
+                                    <constraint firstItem="HcA-1V-IlJ" firstAttribute="top" secondItem="1l4-wX-kId" secondAttribute="top" constant="38" id="UYl-Zh-dFG"/>
+                                    <constraint firstItem="txP-YC-yxp" firstAttribute="top" secondItem="HcA-1V-IlJ" secondAttribute="bottom" constant="65" id="Wnw-Li-2SD"/>
+                                    <constraint firstItem="1l4-wX-kId" firstAttribute="trailing" secondItem="PbP-iL-Vlf" secondAttribute="trailing" constant="16" id="YA9-VM-0ih"/>
+                                    <constraint firstItem="PbP-iL-Vlf" firstAttribute="top" secondItem="1l4-wX-kId" secondAttribute="top" constant="33" id="a1x-bu-ZcE"/>
+                                    <constraint firstItem="FbP-z8-SDZ" firstAttribute="leading" secondItem="1l4-wX-kId" secondAttribute="leading" constant="42" id="c74-6D-hoI"/>
+                                    <constraint firstItem="UOb-IN-ntc" firstAttribute="top" secondItem="1l4-wX-kId" secondAttribute="top" constant="21" id="eaJ-EZ-3IO"/>
+                                    <constraint firstItem="txP-YC-yxp" firstAttribute="leading" secondItem="1l4-wX-kId" secondAttribute="leading" constant="42" id="xDZ-xX-pbD"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="1l4-wX-kId"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kOa-Xq-2RD" firstAttribute="top" secondItem="pwK-ze-05c" secondAttribute="top" id="6dA-bN-5Yn"/>
+                            <constraint firstAttribute="trailing" secondItem="kOa-Xq-2RD" secondAttribute="trailing" id="YWl-cN-4k0"/>
+                            <constraint firstItem="kOa-Xq-2RD" firstAttribute="leading" secondItem="pwK-ze-05c" secondAttribute="leading" id="gEM-Rk-MKT"/>
+                            <constraint firstItem="kOa-Xq-2RD" firstAttribute="bottom" secondItem="8OG-ed-gUX" secondAttribute="bottom" id="xFK-yF-dQm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8OG-ed-gUX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c2a-Dx-xh9"/>
+                    <connections>
+                        <outlet property="passwordFieldArea" destination="txP-YC-yxp" id="S4e-rC-Dh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PO-DQ-XCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4631.1999999999998" y="732.68365817091455"/>
         </scene>
         <!--Pre Export View Controller-->
         <scene sceneID="DDm-Zq-ou5">
             <objects>
-                <viewController id="jK3-Lu-kYj" customClass="PreExportViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="preExportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jK3-Lu-kYj" customClass="PreExportViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KUs-8e-IFV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type your password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMF-xI-72y">
-                                <rect key="frame" x="110.5" y="102" width="154" height="23.5"/>
+                                <rect key="frame" x="110.5" y="58" width="154" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-Ld-mwg">
-                                <rect key="frame" x="42" y="190.5" width="291" height="70"/>
+                                <rect key="frame" x="42" y="146.5" width="291" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="VUh-wN-qR8"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s85-p1-8ya">
-                                <rect key="frame" x="42" y="280.5" width="293" height="40"/>
+                                <rect key="frame" x="42" y="236.5" width="293" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mGf-Ok-pjs"/>
@@ -495,18 +593,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ScK-da-4ww" kind="show" id="SYh-YN-cYL"/>
+                                    <action selector="confirmButtonClick:" destination="jK3-Lu-kYj" eventType="touchUpInside" id="5rs-1l-ZKB"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-YJ-jBd">
-                                <rect key="frame" x="339" y="97" width="20" height="20"/>
+                                <rect key="frame" x="339" y="53" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="MQw-S1-QfE"/>
                                     <constraint firstAttribute="width" constant="20" id="gJd-1B-vJ3"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DC-bu-x7z">
-                                <rect key="frame" x="328" y="85" width="42" height="44"/>
+                                <rect key="frame" x="328" y="41" width="42" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="hOX-nV-Gt4"/>
                                     <constraint firstAttribute="height" constant="44" id="x7i-vV-Vbm"/>
@@ -540,18 +638,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mk2-zl-xE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3774" y="552"/>
+            <point key="canvasLocation" x="5508" y="551.87406296851577"/>
         </scene>
         <!--Export View Controller-->
         <scene sceneID="K4D-6D-QU1">
             <objects>
-                <viewController id="ScK-da-4ww" customClass="ExportViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="exportViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ScK-da-4ww" customClass="ExportViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pez-bj-fqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p98-VO-OPI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="EJs-n7-26o">
                                         <rect key="frame" x="339" y="32" width="20" height="20"/>
@@ -589,7 +687,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNn-Bt-zBd">
-                                <rect key="frame" x="67.5" y="164" width="240.5" height="33"/>
+                                <rect key="frame" x="67.5" y="120" width="240.5" height="33"/>
                                 <string key="text">Anyone with your Private key will have FULL
 access to your wallet! Please keep it safe!</string>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
@@ -597,7 +695,7 @@ access to your wallet! Please keep it safe!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsB-HF-lxS">
-                                <rect key="frame" x="57" y="260" width="261" height="258"/>
+                                <rect key="frame" x="57" y="216" width="261" height="258"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYo-hw-io0">
                                         <rect key="frame" x="20" y="20" width="221" height="218"/>
@@ -640,30 +738,30 @@ access to your wallet! Please keep it safe!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N01-dj-xSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4582" y="552"/>
+            <point key="canvasLocation" x="6460" y="551.87406296851577"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="iJ8-NZ-E1X">
             <objects>
-                <viewController id="kbe-7b-8Un" customClass="ChangePasswordViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="changePasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kbe-7b-8Un" customClass="ChangePasswordViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzV-5s-HBv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ph6-9i-Q9G">
-                                <rect key="frame" x="118.5" y="102" width="138" height="23.5"/>
+                                <rect key="frame" x="118.5" y="58" width="138" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s8b-xB-NKV">
-                                <rect key="frame" x="42" y="190.5" width="291" height="210"/>
+                                <rect key="frame" x="42" y="146.5" width="291" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Ukt-If-JZH"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-NO-Tqg">
-                                <rect key="frame" x="42" y="420.5" width="293" height="40"/>
+                                <rect key="frame" x="42" y="376.5" width="293" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5M6-CW-z49"/>
@@ -679,14 +777,14 @@ access to your wallet! Please keep it safe!</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-GR-dTp">
-                                <rect key="frame" x="339" y="97" width="20" height="20"/>
+                                <rect key="frame" x="339" y="53" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="0v8-hG-med"/>
                                     <constraint firstAttribute="height" constant="20" id="Pne-Ec-R48"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3As-NE-4wb">
-                                <rect key="frame" x="328" y="85" width="42" height="44"/>
+                                <rect key="frame" x="328" y="41" width="42" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="kGQ-QB-cwg"/>
                                     <constraint firstAttribute="height" constant="44" id="lCE-HP-bNe"/>
@@ -725,13 +823,13 @@ access to your wallet! Please keep it safe!</string>
         <!--Transaction View Controller-->
         <scene sceneID="55r-tj-550">
             <objects>
-                <viewController id="FMU-ZG-Upg" customClass="TransactionViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="transactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FMU-ZG-Upg" customClass="TransactionViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7tR-Kx-B7i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-h9-wc4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="65"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="n2K-u1-xvE">
                                         <rect key="frame" x="339" y="32" width="20" height="20"/>
@@ -768,19 +866,59 @@ access to your wallet! Please keep it safe!</string>
                                     <constraint firstAttribute="trailing" secondItem="JuZ-zX-usc" secondAttribute="trailing" constant="7" id="grj-sJ-yp9"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zMk-zO-Wmp">
-                                <rect key="frame" x="0.0" y="129" width="375" height="538"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zMk-zO-Wmp">
+                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="80" id="we6-iU-5Fz">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="transactionTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="transactionTableViewCell" rowHeight="95" id="we6-iU-5Fz" customClass="TransactionTableViewCell" customModule="LiveenWallet">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="we6-iU-5Fz" id="J14-v5-51w">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fH9-Hc-GIw">
+                                                    <rect key="frame" x="15" y="11" width="169" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.39215686274509803" green="0.42352941176470588" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2018.04.19 07:29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-9m-YS7">
+                                                    <rect key="frame" x="15" y="37" width="169" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.73725490196078436" green="0.75294117647058822" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0x93BC41239012389012XEDCcDI1219832" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbu-Ai-vGJ">
+                                                    <rect key="frame" x="16" y="57" width="301" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.73725490199999999" green="0.75294117650000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-24,300" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0op-7z-Vgz">
+                                                    <rect key="frame" x="192" y="11" width="169" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.90980392156862744" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="qbu-Ai-vGJ" id="JHM-Dh-2L0"/>
+                                            <outlet property="amountLabel" destination="0op-7z-Vgz" id="mJR-lx-Jt1"/>
+                                            <outlet property="dateLabel" destination="1Z3-9m-YS7" id="iSg-b6-GEQ"/>
+                                            <outlet property="statusLabel" destination="fH9-Hc-GIw" id="PED-rT-Dod"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FMU-ZG-Upg" id="c3m-Rq-dt9"/>
+                                    <outlet property="delegate" destination="FMU-ZG-Upg" id="maR-xj-Nfo"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -801,36 +939,36 @@ access to your wallet! Please keep it safe!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elu-15-qak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="884"/>
+            <point key="canvasLocation" x="2061.5999999999999" y="883.80809595202402"/>
         </scene>
         <!--Send View Controller-->
         <scene sceneID="JeP-uE-gOf">
             <objects>
-                <viewController id="LtO-d3-qsF" customClass="SendViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sendViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LtO-d3-qsF" customClass="SendViewController" customModule="LiveenWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRj-u6-MmJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM2-Po-fAx">
-                                <rect key="frame" x="168" y="102" width="39" height="23.5"/>
+                                <rect key="frame" x="168" y="58" width="39" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2lt-RF-CHM">
-                                <rect key="frame" x="42" y="190.5" width="291" height="210"/>
+                                <rect key="frame" x="42" y="147" width="291" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="H0V-V3-CeK"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebz-it-dV0">
-                                <rect key="frame" x="42" y="420.5" width="293" height="40"/>
+                                <rect key="frame" x="42" y="377" width="293" height="40"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="R1L-fn-IMk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <state key="normal" title="Confirm">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" red="0.16078431369999999" green="0.4431372549" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -838,9 +976,12 @@ access to your wallet! Please keep it safe!</string>
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="LtO-d3-qsF" eventType="touchUpInside" id="kRf-Kf-03H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="577-yn-1oq">
-                                <rect key="frame" x="40" y="474.5" width="295" height="40"/>
+                                <rect key="frame" x="40" y="431" width="295" height="40"/>
                                 <color key="backgroundColor" red="0.41960784313725491" green="0.65098039215686276" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lYB-CR-09W"/>
@@ -858,12 +999,32 @@ access to your wallet! Please keep it safe!</string>
                                     <action selector="closeViewWithSender:" destination="LtO-d3-qsF" eventType="touchUpInside" id="HUp-SM-XVU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr8-Z8-czD">
+                                <rect key="frame" x="40" y="478" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lDh-Zr-qkS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Charge Gas">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chargeGasButtonClick:" destination="LtO-d3-qsF" eventType="touchUpInside" id="nfK-fl-WLe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.4431372549" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MNo-Et-Juo" firstAttribute="trailing" secondItem="577-yn-1oq" secondAttribute="trailing" constant="40" id="Aaw-5v-zWq"/>
                             <constraint firstItem="MNo-Et-Juo" firstAttribute="trailing" secondItem="ebz-it-dV0" secondAttribute="trailing" constant="40" id="B26-TT-sST"/>
                             <constraint firstItem="577-yn-1oq" firstAttribute="leading" secondItem="MNo-Et-Juo" secondAttribute="leading" constant="40" id="Cbq-RZ-ofJ"/>
+                            <constraint firstItem="gr8-Z8-czD" firstAttribute="top" secondItem="577-yn-1oq" secondAttribute="bottom" constant="7" id="LKt-Jk-jEk"/>
+                            <constraint firstItem="gr8-Z8-czD" firstAttribute="trailing" secondItem="577-yn-1oq" secondAttribute="trailing" id="Prz-Nl-Ecb"/>
                             <constraint firstItem="577-yn-1oq" firstAttribute="top" secondItem="ebz-it-dV0" secondAttribute="bottom" constant="14" id="PxV-KS-gw2"/>
                             <constraint firstItem="ebz-it-dV0" firstAttribute="top" secondItem="2lt-RF-CHM" secondAttribute="bottom" constant="20" id="cth-HP-bon"/>
                             <constraint firstItem="TM2-Po-fAx" firstAttribute="centerX" secondItem="MNo-Et-Juo" secondAttribute="centerX" id="eC6-Zc-gcL"/>
@@ -871,6 +1032,7 @@ access to your wallet! Please keep it safe!</string>
                             <constraint firstItem="2lt-RF-CHM" firstAttribute="top" secondItem="TM2-Po-fAx" secondAttribute="bottom" constant="65" id="jLN-8Q-PiW"/>
                             <constraint firstItem="2lt-RF-CHM" firstAttribute="leading" secondItem="MNo-Et-Juo" secondAttribute="leading" constant="42" id="jY3-uf-hqh"/>
                             <constraint firstItem="MNo-Et-Juo" firstAttribute="trailing" secondItem="2lt-RF-CHM" secondAttribute="trailing" constant="42" id="qEk-OW-w9g"/>
+                            <constraint firstItem="gr8-Z8-czD" firstAttribute="leading" secondItem="577-yn-1oq" secondAttribute="leading" id="uob-CB-laH"/>
                             <constraint firstItem="TM2-Po-fAx" firstAttribute="top" secondItem="MNo-Et-Juo" secondAttribute="top" constant="38" id="v6H-2y-55p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MNo-Et-Juo"/>
@@ -881,7 +1043,43 @@ access to your wallet! Please keep it safe!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ax-oi-qSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4581.6000000000004" y="-218.1409295352324"/>
+            <point key="canvasLocation" x="5520.8000000000002" y="-218.1409295352324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W8y-Zk-aA7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3i7-sn-hne" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JJU-PF-Vp5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xjN-9y-9Dc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnI-D8-5fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bS9-zy-Fia">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fRR-qf-eeb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bOu-eG-la3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8z0-FY-EeH" kind="relationship" relationship="rootViewController" id="hZc-od-afN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slL-8Q-fx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3692" y="732.68365817091455"/>
         </scene>
     </scenes>
     <resources>
