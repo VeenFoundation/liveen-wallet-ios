@@ -13,11 +13,19 @@ class ExportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.isHidden = true;
         
-        let qrcodeImage = generateQRCodeImage("0x93BC4bec6D678e8e74bB9EC3e1Be5EDfA608e2B6")
-        displayQRCodeImage(image: qrcodeImage)
+        // export with passphase.
+        do {
+            let veenApi = try VeenAPI()
+            let key = try veenApi.exportKey()
+            print("private Key: \(key)")
+            
+            let qrcodeImage = generateQRCodeImage(key)
+            displayQRCodeImage(image: qrcodeImage)
+        } catch {
+            print("error in ExportViewController: \(error)")
+        }
     }
     
     func generateQRCodeImage(_ text: String) -> CIImage? {

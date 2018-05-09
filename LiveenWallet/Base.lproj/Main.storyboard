@@ -775,6 +775,9 @@ access to your wallet! Please keep it safe!</string>
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmButtonClick:" destination="kbe-7b-8Un" eventType="touchUpInside" id="yDx-bn-0rF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-GR-dTp">
                                 <rect key="frame" x="339" y="53" width="20" height="20"/>

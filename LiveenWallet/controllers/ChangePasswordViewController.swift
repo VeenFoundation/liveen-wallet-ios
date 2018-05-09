@@ -51,6 +51,7 @@ class ChangePasswordViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     @IBAction func confirmButtonClick(_ sender: Any) {
         print("confirm");
         
@@ -104,14 +105,11 @@ class ChangePasswordViewController: UIViewController {
         let alertController = UIAlertController(title: "Notice", message: "Your password has been changed.", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
-        
-        self.navigationController?.popViewController(animated: true)
+        present(alertController, animated: true, completion: { () in
+            self.navigationController?.popViewController(animated: true)
+        })
     }
-    
-    //MARK: 패스워드 입력 확인 버튼
-    
-    
+
     func matches(for regex: String, in text: String) -> Bool {
         do {
             let regex = try NSRegularExpression(pattern: regex)

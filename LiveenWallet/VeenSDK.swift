@@ -7,6 +7,7 @@ enum APIError : Error {
     case CannotCallBalanceOf
     case NotFoundAccount
     case TransactionError
+    case ExportError
 }
 
 class VeenAPI {
@@ -69,6 +70,18 @@ class VeenAPI {
         }
 
         return transactionId
+    }
+    
+    public func exportKey() throws -> String {
+        guard let account = try? self.getAccount() else {
+            throw APIError.NotFoundAccount
+        }
+        
+        guard let data = try? account.exportKeyStore(passphrase: KinAccountPassphrase, exportPassphrase: "1234") else {
+            throw APIError.ExportError
+        }
+        
+        return data!
     }
     
     // get my gas
