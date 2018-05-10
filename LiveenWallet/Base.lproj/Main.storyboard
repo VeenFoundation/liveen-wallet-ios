@@ -143,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkI-3p-QFs">
-                                <rect key="frame" x="0.0" y="64" width="375" height="256"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="256"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rn4-LE-BnB">
                                         <rect key="frame" x="163.5" y="27" width="48.5" height="23.5"/>
@@ -219,7 +219,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hbX-3C-PS9">
-                                <rect key="frame" x="12" y="332" width="351" height="150"/>
+                                <rect key="frame" x="12" y="288" width="351" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2D-H7-Zye">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="40"/>
@@ -449,13 +449,15 @@
         <!--Navigation Controller-->
         <scene sceneID="5Pl-y1-2S7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8wR-C5-qSI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8wR-C5-qSI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U0X-AB-da0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YFn-N0-XkN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="QgI-In-yqv" kind="relationship" relationship="rootViewController" id="Z9f-f7-BGa"/>
                     </connections>

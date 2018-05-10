@@ -61,14 +61,8 @@ class VeenAPI {
     }
     
     public func transferVeen(to: String, amount: Int) throws -> TransactionId {
-        guard let account = try? self.getAccount() else {
-            throw APIError.NotFoundAccount
-        }
-        
-        guard let transactionId = try? account.sendTransaction(to: to, kin: UInt64(amount), passphrase: KinAccountPassphrase) else {
-            throw APIError.TransactionError
-        }
-
+        let account = try self.getAccount()
+        let transactionId = try account.sendTransaction(to: to, kin: UInt64(amount), passphrase: KinAccountPassphrase)
         return transactionId
     }
     

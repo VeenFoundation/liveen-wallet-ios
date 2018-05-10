@@ -13,8 +13,6 @@ import KeychainAccess
 import QRCodeReader
 
 class SendViewController: UIViewController, QRCodeReaderViewControllerDelegate {
-    
-  
     @IBOutlet weak var previewView: QRCodeReaderView! {
         didSet {
             previewView.setupComponents(showCancelButton: false, showSwitchCameraButton: false, showTorchButton: false, showOverlayView: true, reader: reader)
@@ -154,9 +152,54 @@ class SendViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     }
     
     @IBAction func nextButtonClick(_ sender: Any) {
-        print("nextButton")
+        let address = self.addressField.text!
+        let password = self.passwordField.text!
+        let passwordToConfirm = getPasswordInKeyChain()
+        let amount:Int? = Int(self.amountField.text!)
+        let matched = self.matches(for:"^0x[a-fA-F0-9]{40}$", in: address)
+        
+        if amount == nil {
+            print("값이 숫자가 아닐 때")
+            alert("The amount field should be an integer value.")
+            return;
+        }
+        
+        if matched == false {
+            print("주소형식이 아닐경우")
+            self.alert("This is not valid liveen address, check again")
+            return;
+        }
+        
+        if password != passwordToConfirm {
+            self.alert("The password do not match")
+            return;
+        }
+        
+        do {
+            let veenApi = try VeenAPI()
+            let balance = try veenApi.getCurentVeen()
+            
+            if amount! > balance {
+                self.alert("The amount can not exceed the balance.")
+                return
+            }
+            
+            let transactionId = try veenApi.transferVeen(to: address, amount: amount!)
+            print("toAddress: \(address), amount: \(amount!)")
+            print("transactionId: \(transactionId)")
+            print("transferred.")
+            
+            let alertController = UIAlertController(title: "Notice", message: "Transferred", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+               self.navigationController?.popViewController(animated: true)
+            })
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        } catch {
+            self.alert("Failed to transfer veen.")
+            print("error in SendViewController: \(error)")
+        }
     }
-    
     
     @IBAction func chargeGasButtonClick(_ sender: Any) {
         print("charge Gas")
@@ -165,8 +208,6 @@ class SendViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     @IBAction func closeView(sender: AnyObject?) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    // MARK: QRCodeReader Delegate
     
     func matches(for regex: String, in text: String) -> Bool {
         do {
@@ -182,28 +223,12 @@ class SendViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         reader.stopScanning()
-        
+
         dismiss(animated: true) { [weak self] in
-            
-            
-//            let alert = UIAlertController(
-//                title: "QRCodeReader",
-//                message: String (format:"%@ (of type %@)", result.value, result.metadataType),
-//                preferredStyle: .alert
-//            )
-//            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-//
-//            self?.present(alert, animated: true, completion: nil)
-            
-            
             let matched = self?.matches(for:"^0x[a-fA-F0-9]{40}$", in: result.value)
             if(matched == false) {
                 print("주소형식이 아닐경우")
-                let alertController = UIAlertController(title: "Notice", message: "This is not valid liveen address, check again", preferredStyle: .alert)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                alertController.addAction(cancelAction)
-                self?.present(alertController, animated: true, completion: nil)
-                
+                self?.alert("This is not valid liveen address, check again")
                 return
             }
             
@@ -217,4 +242,16 @@ class SendViewController: UIViewController, QRCodeReaderViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
+    private func alert(_ text: String) {
+        let alertController = UIAlertController(title: "Notice", message: text, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func getPasswordInKeyChain() -> String {
+        let keychain = Keychain(service: "com.liveen.io.LiveenWallet")
+        let savedPassword = try? keychain.getString("appSecret")
+        return savedPassword as! String
+    }
 }
